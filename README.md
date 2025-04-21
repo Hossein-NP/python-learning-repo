@@ -1,2 +1,35 @@
-# python-learning-repo
- 📌 Python Learning Repository این مخزن برای یادگیری و تمرین پایتون ایجاد شده و به مرور زمان گسترش پیدا می‌کند. شامل مفاهیم پایه‌ای، پروژه‌های کوچک، کار با فریم‌ورک‌ها و الگوریتم‌های کاربردی است.  📂 دسته‌بندی‌های اصلی:  🔹 Basics: مفاهیم پایه‌ای مانند متغیرها، حلقه‌ها و توابع 🔹 Projects: پروژه‌های کوچک برای تمرین و یادگیری عملی 🔹 Frameworks: بررسی فریم‌ورک‌های معروف مانند Flask و Django 🔹 Algorithms: پیاده‌سازی الگوریتم‌های مهم مانند مرتب‌سازی و جستجو 📌 هدف این مخزن: ✅ تسلط بیشتر بر زبان پایتون ✅ انجام تمرین‌های متنوع و پروژه‌های کوچک ✅ آشنایی با فریم‌ورک‌های پرکاربرد ✅ به اشتراک‌گذاری دانش و تجربیات  🔹 هرگونه پیشنهاد یا همکاری استقبال می‌شود! 😊
+# Python Learning Repository 🚀🐍
+
+This repository is created to learn and practice **Python** and will be continuously expanded. It includes basic concepts, small projects, frameworks, and useful algorithms.
+
+## 📂 Repository Structure
+
+- **basics:** Core Python concepts
+  - Variables, loops, functions, and more
+- **projects:** Small and practice projects
+  - Useful applications like password generator, to-do list, etc.
+- **frameworks:** Working with Python frameworks
+  - Frameworks like Flask and Django
+- **algorithms:** Basic algorithms
+  - Sorting, searching, and more
+
+## 🎯 Repository Goals
+
+- Master Python and its concepts
+- Build small projects for practice
+- Get familiar with frameworks and algorithms
+- Share experiences and enhance learning
+
+## 📌 How to Use
+
+1. Clone the repository:
+2. Go to the relevant folder and run the Python files or projects.
+3. New topics and projects will be added regularly.
+
+## 🤝 Contributing
+
+If you have suggestions or projects to improve this repository, feel free to contribute!
+
+---
+
+**Please follow this repository and give it a star to stay updated with new projects!**
