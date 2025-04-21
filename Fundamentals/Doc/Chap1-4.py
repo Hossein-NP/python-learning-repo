@@ -361,7 +361,7 @@ print(my_list4)
 print(".........4-remove().........")
 my_list4.remove(2) # Output: [1, 3, 'Python', 4, [5, 6]]
 print("my list after use remove method:", my_list4)
-print("item not exist"my_list4.remove(3))  # Output: [1, 2, 4, [5, 6]] 
+print("item not exist",my_list4.remove(3))  # Output: [1, 2, 4, [5, 6]] 
 # Raises ValueError: list.remove(x): x not in list
 # print(my_list4.remove(8)) # Output: ValueError: list.remove(x): x not in list
 
@@ -378,3 +378,94 @@ NOTE:
 """
 
 
+# 5-pop():
+"""
+  The pop() method in Python is used to remove and return the item at a specified index from a list.
+  If no index is specified, it removes and returns the last item in the list.
+  It modifies the original list in place and returns the removed item.
+
+  Syntax: list.pop(index)
+
+"""
+print(".........5-pop().........")
+my_list5 = [1, 2, 3, 4, 5]
+my_list5.pop()
+print("my list after use pop method:", my_list5)  # Output: [1, 2, 3, 4] (last item removed)
+my_list5.pop(0) # Output: [2, 3, 4] (first item removed)  
+print("my list after use pop method:", my_list5)  # Output: [2, 3, 4]
+item_poped = my_list5.pop(1)
+print("item deleted:",item_poped)
+print("my list after use pop method:", my_list5)  # Output: [2, 4] (second item removed)
+
+
+# 6-insert():
+"""
+  The insert() method in Python is used to insert an item at a specified index in a list.
+  It modifies the original list in place and does not return a new list.
+
+  Syntax: list.insert(index, item)
+
+"""
+print(".........6-insert().........")
+my_list6 = [1, 2, 3, 4, 5]
+my_list6.insert(2, "Python") # Output: [1, 2, 'Python', 3, 4, 5] (inserted "Python" at index 2)
+print("my list after use insert method:", my_list6)  # Output: [1, 2, 'Python', 3, 4, 5] . item Shift to the right
+
+# 7-reverse():
+"""
+  The reverse() method in Python is used to reverse the order of items in a list.
+  It modifies the original list in place and does not return a new list.
+
+  Syntax: list.reverse()
+
+"""
+print(".........7-reverse().........")
+my_list7 = [1, 2, 3, 4, 5]
+reverse = my_list7.reverse() # Output: [5, 4, 3, 2, 1] (list reversed)
+print("my list after use reverse method:", my_list7)  # Output: [5, 4, 3, 2, 1] (list reversed)
+print("my list after use reverse method:", reverse)  # NOTE: Output: None (reverse is None because reverse() does not return anything)
+
+
+# 8-sort():
+"""
+  The sort() method in Python is used to sort the items in a list in ascending order.
+  It modifies the original list in place and does not return a new list.
+
+  Syntax: list.sort()
+
+"""
+print(".........8-sort().........")
+my_list8 = ["C", "E", "A", "D", "B"]
+my_list8.sort() # Output: ["A", "B", "C", "D", "E"] (list sorted in ascending order)
+print("my list after use sort method:", my_list8)
+my_list8.sort(reverse=True) # Output: ["E", "D", "C", "B", "A"] (list sorted in descending order)
+print("my list after use sort method:", my_list8)  # Output: ["E", "D", "C", "B", "A"] (list sorted in descending order)  
+print("my list after use sort method:", my_list8.sort())  # NOTE: Output: None (sort is None because sort() does not return anything)
+
+
+# 9-copy():
+"""
+  The copy() method in Python is used to create a shallow copy of a list.
+  It returns a new list that contains the same items as the original list.
+
+  Syntax: list.copy()
+
+"""
+print(".........9-copy().........")
+my_list9 = [1, 2, 3, 4, 5]
+my_list10 = my_list9.copy()
+my_list10.insert(2, "ali")
+print(my_list10, my_list9) 
+
+
+# 10-clear(): 
+"""
+  The clear() method in Python is used to remove all items from a list.
+  It modifies the original list in place and does not return a new list.
+
+  Syntax: list.clear()
+
+"""
+print(".........10-clear().........")
+my_list10.clear()
+print(my_list10)
