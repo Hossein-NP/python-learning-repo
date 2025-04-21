@@ -242,3 +242,34 @@ print(bio2)  # Output: Hi, my name is Hossein Noruzpur. I am 29 years old. I liv
 
 print("============================================")
 print(".........===Collection Data Types===.........")
+# Collection Data Types:
+"""
+  Python has several built-in collection data types, including:
+  - list: Ordered, mutable collection of items (e.g., [1, 2, 3])
+  - tuple: Ordered, immutable collection of items (e.g., (1, 2, 3))
+  - set: Unordered collection of unique items (e.g., {1, 2, 3})
+  - dict: Unordered collection of key-value pairs (e.g., {"key": "value"})
+"""
+# 1-List:
+"""
+  A list is an ordered, mutable(changable) and  collection of items.
+  Lists can contain different data types and can be modified after creation.
+  Lists are defined using square brackets [] and items are separated by commas.
+"""
+my_list = [1, 2, 3, 4, 5]  # Creating a list of integers 
+print("my_list:", my_list)  # Output: [1, 2, 3, 4, 5]
+# indexing => 0, 1, 2, 3, 4,...........
+# If a list contains that N member, the index is a 0 from N-1.
+# For example, if a list contains 5 members, the index is 0 to 4.
+print("my_list:", my_list[0])  # Output: 1 (first item)
+print("my_list:", my_list[1])  # Output: 2 (second item)
+print("my_list:", my_list[2])  # Output: 3 (third item)
+print("my_list:", my_list[3])  # Output: 4 (fourth item)
+print("my_list:", my_list[4])  # Output: 5 (fifth item)
+print("my_list:", my_list[5])  # Output: IndexError: list index out of range (no sixth item)
+print("my_list:", my_list[-1])  # Output: 5 (last item)
+print("my_list:", my_list[-2])  # Output: 4 (second last item)
+print("my_list:", my_list[-3])  # Output: 3 (third last item)
+print("my_list:", my_list[-4])  # Output: 2 (fourth last item)
+print("my_list:", my_list[-5])  # Output: 1 (fifth last item)
+
