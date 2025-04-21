@@ -252,12 +252,14 @@ print(".........===Collection Data Types===.........")
 """
 # 1-List:
 """
-  A list is an ordered, mutable(changable) and  collection of items.
+  A list is an ordered, mutable(changable) and  duplicatable  collection of items.
   Lists can contain different data types and can be modified after creation.
   Lists are defined using square brackets [] and items are separated by commas.
 """
+print(".........1-Lists.........")
 my_list = [1, 2, 3, 4, 5]  # Creating a list of integers 
 print("my_list:", my_list)  # Output: [1, 2, 3, 4, 5]
+print(".........Lists indexing.........")
 # indexing => 0, 1, 2, 3, 4,...........
 # If a list contains that N member, the index is a 0 from N-1.
 # For example, if a list contains 5 members, the index is 0 to 4.
@@ -266,10 +268,113 @@ print("my_list:", my_list[1])  # Output: 2 (second item)
 print("my_list:", my_list[2])  # Output: 3 (third item)
 print("my_list:", my_list[3])  # Output: 4 (fourth item)
 print("my_list:", my_list[4])  # Output: 5 (fifth item)
-print("my_list:", my_list[5])  # Output: IndexError: list index out of range (no sixth item)
+# print("my_list:", my_list[5])  # Output: IndexError: list index out of range (no sixth item)
 print("my_list:", my_list[-1])  # Output: 5 (last item)
 print("my_list:", my_list[-2])  # Output: 4 (second last item)
 print("my_list:", my_list[-3])  # Output: 3 (third last item)
 print("my_list:", my_list[-4])  # Output: 2 (fourth last item)
 print("my_list:", my_list[-5])  # Output: 1 (fifth last item)
+
+# slicing => [start:end:step]
+my_list2 = [1, 2, 3, 4, 5, 6, 7, 8, 9, 10, [11, 12, 13, 14, 15]]
+print(my_list2[:]) # Output: [1, 2, 3, 4, 5, 6, 7, 8, 9, 10, [11, 12, 13, 14, 15]]
+print(my_list2[::]) # Output: [1, 2, 3, 4, 5, 6, 7, 8, 9, 10, [11, 12, 13, 14, 15]]
+print(my_list2[0::]) # Output: [1, 2, 3, 4, 5, 6, 7, 8, 9, 10, [11, 12, 13, 14, 15]]
+print(my_list2[1:8:]) # Output: [2, 3, 4, 5, 6, 7, 8]
+print(my_list2[1:9:]) # Output: [2, 3, 4, 5, 6, 7, 8, 9]
+print(my_list2[::2]) # Output: [1, 3, 5, 7, 9, [11, 12, 13, 14, 15]]
+print(my_list2[1::2]) # Output: [2, 4, 6, 8, 10]
+print(my_list2[-1:-11:]) # Output: [] (empty list, no items in reverse order)
+print(my_list2[-1:-12:]) # Output: [] (empty list, no items in reverse order)
+print(my_list2[-1:-10:]) # Output: [] (empty list, no items in reverse order)
+print(my_list2[-1:-9:-1]) # Output: [[11, 12, 13, 14, 15], 10, 9, 8, 7, 6, 5, 4]
+print(my_list2[-1:-10:-1]) # Output: [[11, 12, 13, 14, 15], 10, 9, 8, 7, 6, 5, 4, 3]
+print(my_list2[-1::-1]) # Output: [[11, 12, 13, 14, 15], 10, 9, 8, 7, 6, 5, 4, 3, 2, 1]
+print(my_list2[-1::-3]) # Output: [[11, 12, 13, 14, 15], 8, 5, 2]
+print(my_list2[10][0]) # Output: 11 (accessing the first item of the nested list)
+print(my_list2[10][1]) # Output: 12 (accessing the second item of the nested list)
+print(my_list2[10][::]) # Output: [11, 12, 13, 14, 15] (accessing the entire nested list)
+print(my_list2[10][0:3]) # Output: [11, 12, 13] (accessing the first three items of the nested list)  
+print(my_list2[10][-1:-5:-1]) # Output: [15, 14, 13, 12] (accessing the last five items of the nested list in reverse order)  
+print(my_list2[10][-1::-1]) # output: [15, 14, 13, 12, 11] (accessing the entire nested list in reverse order)
+
+
+print(".........Lists Methods.........")
+# Lists Methods:
+"""
+  Lists have several built-in methods for manipulating and accessing items.
+  Some common list methods include:
+  - index(): Returns the index of the first occurrence of a specified item in the list.
+  - count(): Returns the number of occurrences of a specified item in the list.
+  - append(): Adds an item to the end of the list.
+  - remove(): Removes the first occurrence of a specified item from the list.
+  - insert(): Inserts an item at a specified index in the list.
+  - pop(): Removes and returns the item at a specified index (default is the last item).
+  - sort(): Sorts the items in the list in ascending order.
+  - reverse(): Reverses the order of items in the list.
+  - clear(): Removes all items from the list.
+"""
+# 1-index():
+print(".........1-index().........")
+my_list3 = ["HTML", "CSS", "JavaScript", "Python", "Java", "JavaScript"]
+print("Second item numeric index:", my_list3.index("CSS")) # Output: 1 (index of "CSS")
+# This method does not change the list.
+print(my_list3) # Output: ["HTML", "CSS", "JavaScript", "Python", "Java"]
+
+# 2-count():
+print(".........2-count().........")
+print("Number of repetitions:", my_list3.count("JavaScript")) # Output: 2 (number of occurrences of "JavaScript") 
+
+
+
+
+
+
+# 3-append():
+"""
+  The append() method in Python is used to add an item to the end of a list.
+  It modifies the original list in place and "does not return a new list".
+
+  Syntax: list.append(item)
+
+"""
+print(".........3-append().........")
+my_list4 = [1, 2, 3]
+# Can Add Any Data Type:
+my_list4.append("Python")
+print(my_list4)  # Output: [1, 2, 3, 'Python']
+my_list4.append(4) # Output: [1, 2, 3, 'Python', 4]
+print(my_list4)  # Output: [1, 2, 3, 'Python', 4]
+# Adds Nested Lists:
+my_list4.append([5, 6]) # Output: [1, 2, 3, 'Python', 4, [5, 6]]
+print(my_list4)
+
+
+# 4-remove():
+"""
+  The remove() method in Python is used to remove the first occurrence of a "specified item" from a list.
+  It modifies the original list in place and "does not return a new list".
+
+  Syntax: list.remove(item)
+
+"""
+print(".........4-remove().........")
+my_list4.remove(2) # Output: [1, 3, 'Python', 4, [5, 6]]
+print("my list after use remove method:", my_list4)
+print("item not exist"my_list4.remove(3))  # Output: [1, 2, 4, [5, 6]] 
+# Raises ValueError: list.remove(x): x not in list
+# print(my_list4.remove(8)) # Output: ValueError: list.remove(x): x not in list
+
+# remove_item = my_list4.remove("Python")
+# print(remove_item)  # Output: None (remove_item is None because remove() does not return anything)
+"""
+NOTE:
+  The remove() method in Python does not return any value;
+  it modifies the list in place. When you assign the 
+  result of remove() to a variable, such as remove_item,
+  the variable will be assigned None because the method
+  does not return anything.
+
+"""
+
 
