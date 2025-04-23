@@ -7,12 +7,12 @@
 """
 cordinate_x = 10
 cordinate_y = 20
-
 print("Current position:", cordinate_x, cordinate_y)
+
+# OR
 
 x, y = 20, 10
 print("Current Position:(", x, ",", y,")")
-
 
 
 # Exercise 2
@@ -24,9 +24,10 @@ print("Current Position:(", x, ",", y,")")
   b) Without using auxiliary variables, raise the sum of x and y to the power of 2.
 
 """
-x_data = 5
-y_data = 10
-print(f"x: {x_data}  y: {y_data}")
-x_data += 5
-y_data -= 5
-print(f"x: {x_data}  y: {y_data}")
+x_data, y_data = 5, 10            # multiple assignment
+print("Before swap: ","x_data: ", x_data, "y_data: ", y_data)
+
+x_data, y_data = y_data, x_data
+print("After swap:", "X_data:", x_data, "y_data:", y_data)
+
+print("x_data + y_data ** 2: ", (x_data + y_data) ** 2)
