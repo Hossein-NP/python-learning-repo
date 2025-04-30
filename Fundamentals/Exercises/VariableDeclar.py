@@ -8,9 +8,7 @@
 cordinate_x = 10
 cordinate_y = 20
 print("Current position:", cordinate_x, cordinate_y)
-
 # OR
-
 x, y = 20, 10
 print("Current Position:(", x, ",", y,")")
 
@@ -25,9 +23,9 @@ print("Current Position:(", x, ",", y,")")
 
 """
 x_data, y_data = 5, 10            # multiple assignment
-print("Before swap: ","x_data: ", x_data, "y_data: ", y_data)
+print("Before swap: x_data:", x_data, " y_data: ", y_data)
 
 x_data, y_data = y_data, x_data
-print("After swap:", "X_data:", x_data, "y_data:", y_data)
+print("After swap: X_data:", x_data, "  y_data:", y_data)
 
 print("x_data + y_data ** 2: ", (x_data + y_data) ** 2)
