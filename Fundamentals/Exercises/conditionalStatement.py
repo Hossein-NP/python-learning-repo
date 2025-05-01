@@ -42,5 +42,4 @@ except ValueError:
 print("*" *30, "Exercise 1: with while loop", "*" *30, end="\n\n")
 
 while True:
-  number = float(input("Enter a number: "))
-  
+  number = input("Enter a number: ").lower()
