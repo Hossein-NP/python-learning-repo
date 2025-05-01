@@ -28,14 +28,61 @@ while True:
   characters = []
   for i in character:
     characters.append(i)
-    length = len(characters)
 
+  length = len(characters)
   print(f"Entered Character: {characters}")
   print("The number of characters: ", + length, end="\n\n")
 
   if length > 1:
-    print("More than one character entered. Please enter a character.")
+    print("More than two character entered. Please enter a character.")
   else:
     print("The number of characters allowed.")
     break
 
+if character.isupper():
+  print("Uppercase Letter")
+
+elif character.islower():
+  print("Lowercase Letter")
+
+elif character.isdigit():
+  print("Digit")
+
+elif character.isalpha():
+  print("Alpha")
+
+elif character.isalnum():
+  print("Alpha + digit")
+
+else:
+  print("other characters")
+
+
+# Exercise 3: second method
+
+while True:
+  characters = input("Please enter your character (a single letter, number, or symbol): ").strip()
+
+  if len(characters) != 1:
+    print("❌ Please enter exactly one character.\n")
+  else:
+    print("✅ Character accepted.\n")
+    break
+
+if character.isupper():
+  print("Uppercase Letter")
+
+elif character.islower():
+  print("Lowercase Letter")
+
+elif character.isdigit():
+  print("Digit")
+
+elif character.isalpha():
+  print("Alpha")
+
+elif character.isalnum():
+  print("Alpha + digit")
+
+else:
+  print("other characters")
