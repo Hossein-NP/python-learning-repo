@@ -42,4 +42,19 @@ except ValueError:
 print("*" *30, "Exercise 1: with while loop", "*" *30, end="\n\n")
 
 while True:
-  number = input("Enter a number: ").lower()
+  try:
+    number = float(input("Please enter a number (e.g., 5 or 3.14): "))
+    break
+  except ValueError:
+    print("Invalid input! Please enter a numeric value.", end="\n\n")
+
+if number < 0:
+  print(f"The entered number is negative.")
+
+elif number > 0:
+  print(f"The entered number is positive.")
+
+else:
+  print(f"The entered number is zero.")
+
+print(f"The entered number is {number}.", end="\n\n")
