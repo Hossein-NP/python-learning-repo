@@ -7,7 +7,7 @@ print("*" *30, "Conditional Statement Exercise:", "*" *30, end="\n\n")
 """
 print("*" *30, "Exercise 1:", "*" *30, end="\n\n")
 
-number = float(input("Enter a number: "))
+number = float(input("Please enter a number (e.g., 5 or 3.14 or -5 or 0):  "))
 if number < 0:
   print(f"The entered number is negative.")
 
@@ -23,7 +23,7 @@ print(f"The entered number is {number}.", end="\n\n")
 print("*" *30, "Exercise 1: try/except", "*" *30, end="\n\n")
 
 try:
-  number = float(input("Enter a number: "))
+  number = float(input("Please enter a number (e.g., 5 or 3.14 or -5 or 0):  "))
   if number < 0:
     print(f"The entered number is negative.")
 
@@ -41,9 +41,9 @@ except ValueError:
 # Exercise 1: with while loop
 print("*" *30, "Exercise 1: with while loop", "*" *30, end="\n\n")
 
-while True:
+"""while True:
   try:
-    number = float(input("Please enter a number (e.g., 5 or 3.14): "))
+    number = float(input("Please enter a number (e.g., 5 or 3.14 or -5 or 0): "))
     break
   except ValueError:
     print("Invalid input! Please enter a numeric value.", end="\n\n")
@@ -57,4 +57,5 @@ elif number > 0:
 else:
   print(f"The entered number is zero.")
 
-print(f"The entered number is {number}.", end="\n\n")
+print(f"The entered number is {number}.", end="\n\n")"""
+
