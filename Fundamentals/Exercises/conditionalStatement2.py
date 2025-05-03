@@ -86,3 +86,41 @@ elif character.isalnum():
 
 else:
   print("other characters")
+
+
+print("*" *30, "Exercise 4: Comparing two numbers", "*" *30)
+
+# Exercise 4:
+"""
+ Take two numbers from the user and print the larger number.
+"""
+
+# METHOD 1:
+
+number = float(input("Please enter first number(e.g.,10, 12.52, -20): "))
+number_2 = float(input("Please enter second number(e.g.,10, 12.52, -20): "))
+
+if number < number_2:
+  print(f"{number} < {number_2}", end="\n\n")
+elif number > number_2:
+  print(f"{number} > {number_2}", end="\n\n")
+elif number == number_2:
+  print(f"{number} == {number_2}", end="\n\n")
+else:
+  print("The numbers entered are not correct.")
+
+
+# METHOD 2 :
+numbers = []
+i = 1
+while i <= 2:
+    number = float(input(f"Enter number {i}: "))
+    numbers.append(number)
+    i += 1
+
+if numbers[0] < numbers[1]:
+  print(f"{numbers[0]} < {numbers[1]}", end="\n\n")
+elif numbers[0] > numbers[1]:
+  print(f"{numbers[0]} > {numbers[1]}", end="\n\n")
+else:
+  print(f"{numbers[0]} == {numbers[1]}", end="\n\n")
