@@ -69,3 +69,14 @@ print(f"Odd Count: {odd_count}\nEven Count: {even_count}")
 
 
 print(end="\n\n")
+
+# Exercise 4: Take a number from the user and display the multiplication table of that number up to 10 with a for loop.
+print("(*,*)" *5, "Loops: Exercise 4: multiplication table", "(*,*)" *5)
+
+num = int(input("Please enter only one number.(e.g.,1, 3, 4, ...): "))
+for i in range(1, 6):
+  multipli = num * i
+  print(f"{num} * {i}= ", num * i, end="\t")  #You can customize the column spacing with the end parameter.
+  i += 5
+  for j in range(1, 2):
+    print(f"{num} * {i}= ", num * i)
