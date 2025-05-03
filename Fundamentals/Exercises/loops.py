@@ -47,18 +47,25 @@ print(end="\n\n")
 # Exercise 3: Print all even numbers between 1 and 50.
 print("(*,*)" *5, "Loops: Exercise 3: all even numbers between 1 and 50", "(*,*)" *5)
 remain_list = []
+odd_list = []
+even_list = []
 odd_count = 0
 even_count = 0
-j = 0
 for i in range(1, 51):
   remain = i % 2
   remain_list.append(remain)
-  print(f"All remains: {remain_list}", end=" ")
-  for j in remain_list:
-    if remain_list[j] == 1:
-      odd_count += 1
-    elif remain_list[j] == 0:
-      even_count += 1
+  if i % 2 == 0:
+    even_list.append(i)
+  elif i % 2 == 1:
+    odd_list.append(i)
+print(f"Odd Numbers: {odd_list}\nEven Numbers: {even_list}")
+for value in remain_list:
+  if value == 1:
+    odd_count += 1
+  elif value == 0:
+    even_count += 1
+print(f"All remains: {remain_list}")
 print(f"Odd Count: {odd_count}\nEven Count: {even_count}")
 
 
+print(end="\n\n")
