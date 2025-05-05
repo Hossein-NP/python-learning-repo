@@ -57,4 +57,8 @@ for i in range(1, 7):
     print("*", end="")
   print()
   step_2 -= 1
-  
+
+print(end="\n\n")
+# Numeric patterns
+
+print("(*,*)" *5, "Loops >> PATTERNS: Numeric patterns-1", "(*,*)" *5)
