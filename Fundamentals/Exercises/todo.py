@@ -5,9 +5,11 @@
 
 works_list , works_time_list = [], []
 while True:
+
     # work input
     work = input("Enter what you want to do (ex => walking, reading,.....): ").lower()
     works_list.append(work)
+
     # work time input
     while True:
         work_time = input("Enter the time of to do (ex => 09 : 45): ").strip()
@@ -24,11 +26,14 @@ while True:
             break
     if resume == "no":
         break
+
 # show output
 print(f"Works List: {works_list}\nWork List Time: {works_time_list}", end="\n\n")
+
 # Save number of tasks and times
 tasks_number = len(works_list)
 tasks_time_number = len(works_time_list)
+
 # Table display of data
 print("زمان انجام کار ها", " " * 3, " کار ها", " " * 3, "شماره ردیف")
 counter = 0
@@ -39,6 +44,7 @@ for i in  range(0, tasks_number):
         print(works_list[counter], " " * 6, end=" ")
         print(works_time_list[counter])
     counter += 1
+    
 # Clock code
 time = []
 for hour in range(0, 23 + 1):
