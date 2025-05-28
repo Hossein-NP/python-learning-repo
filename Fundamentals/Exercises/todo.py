@@ -4,12 +4,25 @@
 # START PROGRAM
 
 tasks_list , tasks_time_list, count = [], [], 1
+tsk_inpt_count = 1
+forbeden_tasks = ["drink", "drug", "smoking"]
 while True:
-    # task input
-    task = input("Enter what you want to do (ex => walking, reading,.....): ").lower()
-    if task == "":
-        task = f"untitled {count}"
-        count += 1
+    while True:
+        # task input
+        if tsk_inpt_count == 1:
+            task = input("Enter what you want to do (ex => walking, reading,.....): ").lower()
+            tsk_inpt_count += 1
+        else:
+            task = input("Enter what you want to do: ").lower()
+        # filter forbeden task
+        if task in forbeden_tasks:
+            print("You are not authorized to do this.Please try again")
+        else:
+            break
+        # untitled tasks
+        if task == "":
+            task = f"untitled {count}"
+            count += 1
     tasks_list.append(task)
     # task hour input
     while True:
