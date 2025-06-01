@@ -5,24 +5,25 @@
 
 tasks_list , tasks_time_list, count = [], [], 1
 tsk_inpt_count = 1
+task_repeat_count = 2
 forbeden_tasks = ["drink", "drug", "smoking"]
 while True:
     while True:
         # task input
         if tsk_inpt_count == 1:
-            task = input("Enter what you want to do (ex => walking, reading,.....): ").lower()
+            task = input("Enter what you want to do (ex => walking, reading,.....): ").strip().lower()
             tsk_inpt_count += 1
         else:
-            task = input("Enter what you want to do: ").lower()
+            task = input("Enter what you want to do: ").strip().lower()
         # filter forbeden task
         if task in forbeden_tasks:
             print("You are not authorized to do this.Please try again")
         else:
             break
-        # untitled tasks
-        if task == "":
-            task = f"untitled {count}"
-            count += 1
+    # untitled tasks
+    if task == "":
+        task = f"untitled {count}"
+        count += 1
     tasks_list.append(task)
     # task hour input
     while True:
@@ -85,71 +86,68 @@ for hour in range(0, 23 + 1):
         time = f"{hour} : {minute}"
         # times_list.append(f"{hour} : {minute}")
         # print(time)
+        for i in range(1, tasks_number + 1):
+            print(time)
+            print("⏰", tasks_list[tasks_time_list.index(time)])
         if time in tasks_time_list:
             print(time)
             print("⏰", tasks_list[tasks_time_list.index(time)])
-            while True:
-                if time == "23 : 59":
-                    check = str(input("Do you want to do your todo?(yes/no) ")).strip().lower()
-                else:
-                    check = str(input("Do you want to do your todo?(yes/no/snooze) ")).strip().lower()
-                if check == "no":
-                    print("Task skipped!")
-                    break
-                elif check == "yes":
-                    print("Task Done")
-                    break
-                elif check == "snooze":
-                    break
-                else:
-                    print("Invalid input\n Try again")
-            if check == "snooze" and time != "23 : 59":
-                tasks_list.append(tasks_list[tasks_time_list.index(time)])
-                while True:
-                    try:
-                        snooze_details = int(input("Enter '1' to snooze 10 minutes\n""Enter '2' to select new time? "))
-                    except ValueError:
-                        print("Invalid input\n Try again")
-                    else:
-                        break
-                if snooze_details == 1:
-                    pass
-                elif snooze_details == 2:
-                    while True:
-                        try:
-                            new_task_hour = int(input("Enter the new hour of the task: "))
-                        except ValueError:
-                            print("Invalid Input\nTry Again")
-                        else:
-                            if hour <= new_task_hour <= 24:
-                                if new_task_hour == hour:
-                                    if minute == 59:
-                                        print("You can't snooze at this moment...")
-                                    else:
-                                        break
-                                else:
-                                    break
-                            else:
-                                print("Invalid Input\nTry Again")
-                    while True:
-                        try:
-                            new_task_minute = int(input("Enter new todo minute: "))
-                        except ValueError:
-                            print("Invalid Input\nTry Again")
-                        else:
-                            if hour == new_task_hour:
-                                if minute < new_task_minute < 60:
-                                    break
-                                else:
-                                    print("Invalid Input\nTry Again")
-                            elif hour != new_task_hour:
-                                if new_task_minute in range(0, 59 + 1):
-                                    break
-                                else:
-                                    print("Invalid Input\nTry Again")
-                            else:
-                                print("Invalid Input\nTry Again")
-                new_time = f"{new_task_hour} : {new_task_minute}"
-                tasks_time_list.append(new_time)
+            check = str(input("Do you want to save this?(yes/no/snooze) "))
+            if check == "yes":
+                break
+            elif check == "no":
+                break
+            elif check == "snooze":
+                break
             else:
-                print("You can't snooze in day's last minute")
+                print("Invalid input/Try again")
+            # if check == "snooze" and time != "23 : 59":
+            #     tasks_list.append(tasks_list[tasks_time_list.index(time)])
+            #     while True:
+            #         try:
+            #             snooze_details = int(input("Enter '1' to snooze 10 minutes\n""Enter '2' to select new time? "))
+            #         except ValueError:
+            #             print("Invalid input\n Try again")
+            #         else:
+            #             break
+            #     if snooze_details == 1:
+            #         pass
+            #     elif snooze_details == 2:
+            #         while True:
+            #             try:
+            #                 new_task_hour = int(input("Enter the new hour of the task: "))
+            #             except ValueError:
+            #                 print("Invalid Input\nTry Again")
+            #             else:
+            #                 if hour <= new_task_hour <= 24:
+            #                     if new_task_hour == hour:
+            #                         if minute == 59:
+            #                             print("You can't snooze at this moment...")
+            #                         else:
+            #                             break
+            #                     else:
+            #                         break
+            #                 else:
+            #                     print("Invalid Input\nTry Again")
+            #         while True:
+            #             try:
+            #                 new_task_minute = int(input("Enter new todo minute: "))
+            #             except ValueError:
+            #                 print("Invalid Input\nTry Again")
+            #             else:
+            #                 if hour == new_task_hour:
+            #                     if minute < new_task_minute < 60:
+            #                         break
+            #                     else:
+            #                         print("Invalid Input\nTry Again")
+            #                 elif hour != new_task_hour:
+            #                     if new_task_minute in range(0, 59 + 1):
+            #                         break
+            #                     else:
+            #                         print("Invalid Input\nTry Again")
+            #                 else:
+            #                     print("Invalid Input\nTry Again")
+            #     new_time = f"{new_task_hour} : {new_task_minute}"
+            #     tasks_time_list.append(new_time)
+            # else:
+            #     print("You can't snooze in day's last minute")
