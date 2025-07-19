@@ -28,4 +28,21 @@ print("Before swap: x_data:", x_data, " y_data: ", y_data)
 x_data, y_data = y_data, x_data
 print("After swap: X_data:", x_data, "  y_data:", y_data)
 
-print("x_data + y_data ** 2: ", (x_data + y_data) ** 2)
+print("x_data + y_data ** 2: ", (x_data + y_data) ** 2, end="\n\n")
+
+print("==============👇==============", end="\n\n")
+
+# values change
+x = 5
+y = 6
+print(f"x: {x} y: {y}")
+x, y = y, x  # x = y , y = x
+print(f"x: {x} y: {y}")
+
+print("==============👇==============", end="\n\n")
+
+# Area of the rectangle
+length  = 12 # cm
+width = 20 # cm
+area = length * width
+print(f"Area of the rectangle: {area} cm**2")
