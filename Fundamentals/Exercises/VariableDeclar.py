@@ -1,3 +1,4 @@
+import fractions
 # Exercise 1
 """
   Suppose you are programming a simple game. You need to store the position of an object in the game.
@@ -33,6 +34,7 @@ print("x_data + y_data ** 2: ", (x_data + y_data) ** 2, end="\n\n")
 print("==============👇==============", end="\n\n")
 
 # values change
+
 x = 5
 y = 6
 print(f"x: {x} y: {y}")
@@ -42,7 +44,31 @@ print(f"x: {x} y: {y}")
 print("==============👇==============", end="\n\n")
 
 # Area of the rectangle
+
 length  = 12 # cm
 width = 20 # cm
 area = length * width
 print(f"Area of the rectangle: {area} cm**2")
+
+print("==============👇==============", end="\n\n")
+
+# Celsius to Fahrenheit: (Celsius * 9/5) + 32
+
+celsius = 55.25
+fahrenheit = (celsius * 9 / 5) + 32  # (celsius * 9) / 5 + 32
+print(f"fahrenheit: {fahrenheit}")
+
+print("==============👇==============", end="\n\n")
+
+# circle area and circumference
+# circle area = pi * r**2
+# pi: 3.14 r: radius
+#
+# circumference = 2 * pi * radius
+
+pi = 3.14
+circle_radius = 25 # cm
+circle_area = pi * (circle_radius**2)
+print(f"circle area: {circle_area} cm**2")
+print(f"circumference: ", 2 * pi * circle_radius,"cm")
+
