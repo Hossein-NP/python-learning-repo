@@ -31,7 +31,7 @@ print("After swap: X_data:", x_data, "  y_data:", y_data)
 
 print("x_data + y_data ** 2: ", (x_data + y_data) ** 2, end="\n\n")
 
-print("==============👇==============", end="\n\n")
+print("==============👇==============")
 
 # values change
 
@@ -41,7 +41,7 @@ print(f"x: {x} y: {y}")
 x, y = y, x  # x = y , y = x
 print(f"x: {x} y: {y}")
 
-print("==============👇==============", end="\n\n")
+print("==============👇==============")
 
 # Area of the rectangle
 
@@ -50,7 +50,7 @@ width = 20 # cm
 area = length * width
 print(f"Area of the rectangle: {area} cm**2")
 
-print("==============👇==============", end="\n\n")
+print("==============👇==============")
 
 # Celsius to Fahrenheit: (Celsius * 9/5) + 32
 
@@ -58,7 +58,7 @@ celsius = 55.25
 fahrenheit = (celsius * 9 / 5) + 32  # (celsius * 9) / 5 + 32
 print(f"fahrenheit: {fahrenheit}")
 
-print("==============👇==============", end="\n\n")
+print("==============👇==============")
 
 # circle area and circumference
 # circle area = pi * r**2
@@ -72,3 +72,12 @@ circle_area = pi * (circle_radius**2)
 print(f"circle area: {circle_area} cm**2")
 print(f"circumference: ", 2 * pi * circle_radius,"cm")
 
+print("==============👇==============")
+
+# Unit conversion
+# Example kg --> g
+kg = int(input("Please enter kg: "))
+g = kg * 1000
+print(str(g) + "g")
+# or
+print(g, "g", sep="")
