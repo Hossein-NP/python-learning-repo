@@ -74,10 +74,4 @@ print(f"circumference: ", 2 * pi * circle_radius,"cm")
 
 print("==============👇==============")
 
-# Unit conversion
-# Example kg --> g
-kg = int(input("Please enter kg: "))
-g = kg * 1000
-print(str(g) + "g")
-# or
-print(g, "g", sep="")
+
